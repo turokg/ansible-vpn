@@ -1,0 +1,15 @@
+- hosts: vpn
+  gather_facts: true
+  become: true
+  roles:
+    - role: kyl191.openvpn
+      openvpn_port: 4300
+      openvpn_client_register_dns: false
+      openvpn_sync_certs: true
+      openvpn_fetch_client_configs: true
+      openvpn_set_dns: false
+      openvpn_compression: ""
+      openvpn_fetch_client_configs_dir: "{{ inventory_dir }}"
+      clients:
+        - sam
+        - pippin
