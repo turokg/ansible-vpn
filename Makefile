@@ -13,6 +13,3 @@ prep: ## install all deps
 
 run: ## setup vpn server
 	ansible-playbook playbook.yml
-
-vpc:
-	yc compute instance create --name my-vpn --zone ru-central1-a --ssh-key ~/.ssh/id_ed25519.pub
